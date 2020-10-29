@@ -36,3 +36,8 @@ stages:
         containerRegistry: spica_container_registry
         tags: |
           $(tag)
+    - task: Docker@2
+      displayName: Logout From Spica Registry
+      inputs:
+        command: logout
+        containerRegistry: spica_container_registry
